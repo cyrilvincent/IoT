@@ -1,0 +1,14 @@
+[Unit]
+Description=PiBox Autostart
+After=network.target
+
+[Service]
+ExecStart=/bin/bash servicestart.sh
+WorkingDirectory=/home/pi/pibox/scripts
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
