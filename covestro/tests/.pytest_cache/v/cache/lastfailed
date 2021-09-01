@@ -1,8 +1,0 @@
-{
-  "integrationtests.py::PiBoxTest::testBTServerClients": true,
-  "integrationtests.py::PiBoxTest::testMix": true,
-  "integrationtests.py::PiBoxTest::testPhone": true,
-  "integrationtests.py::PiBoxTest::testPreasure": true,
-  "integrationtests.py::PiBoxTest::testTemperature": true,
-  "integrationtests.py::PiBoxTest::testWeight": true
-}
