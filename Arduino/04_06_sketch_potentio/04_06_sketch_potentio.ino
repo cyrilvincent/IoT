@@ -1,12 +1,6 @@
-#include <math.h>
- 
-// Variable declaration
-const long B = 4275;               // B value of the thermistor
-const long R0 = 100000;            // R0 = 100k
-const int pinTempSensor = A1;     // Grove - Temperature Sensor connect to A1
 int button = A0;
-int potentio_read;
-float angle_read;
+int potar;
+float angle;
 
 
 void setup() {
@@ -24,13 +18,13 @@ void loop() {
   Serial.print("angle = ");
   Serial.println(angle);
   if (potar <= 512)
-    {
-      digitalWrite(LED_BUILTIN, LOW);
-    }
-  if (potar >= 512)
-    {
-      digitalWrite(LED_BUILTIN, HIGH);
-    }
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
   delay(1000);
 }
 
