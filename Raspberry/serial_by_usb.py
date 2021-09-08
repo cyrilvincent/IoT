@@ -1,6 +1,7 @@
 import serial
+import config
 
-sock = serial.Serial("COM4")
+sock = serial.Serial(config.usb)
 s = sock.readline()
 print(s.decode().strip())
 for i in range(10):
