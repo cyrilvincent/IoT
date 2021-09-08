@@ -7,7 +7,7 @@ sock.connect((mac, 1))
 def readline():
     s = ""
     while(True):
-        data = bluetooth.recv(1024).decode()
+        data = sock.recv(1024).decode()
         s += data
         if '\r\n' in data:
             break;
