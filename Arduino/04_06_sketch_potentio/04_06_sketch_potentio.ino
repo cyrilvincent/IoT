@@ -14,7 +14,7 @@ void loop() {
   potar = analogRead(button);
   Serial.print("Potar = ");
   Serial.println(potar);
-  angle = ((float)potar * 300.0) / 1023.0;
+  angle = (potar * 300.0) / 1023.0;
   Serial.print("angle = ");
   Serial.println(angle);
   if (potar <= 512)
