@@ -8,4 +8,4 @@ for i in range(10):
     sock.write(msg.encode())
     s = sock.readline()
     print(s.decode().strip())
-
+sock.close()
