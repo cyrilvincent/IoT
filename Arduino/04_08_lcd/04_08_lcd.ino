@@ -20,7 +20,7 @@ void loop() {
     String data = Serial.readStringUntil('\n');
     delay(400);
     digitalWrite(LED_BUILTIN, LOW);
-    lcd.print("Begin");
+    lcd.print(data);
     lcd.setRGB(255, 255, 255); 
   }
 }
