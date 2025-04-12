@@ -18,7 +18,11 @@ void setup(void)
 void loop(void)
 {
     float pre = bme280.getPressure();
-    Serial.println("pressure:"+String(pre));
+    Serial.print("pressure:"+String(pre));
+    float temp = bme280.getTemperature();
+    Serial.print(" temperature:"+String(temp));
+    float hum = bme280.getHumidity();
+    Serial.println(" humidity:"+String(hum));
     digitalWrite(LED_BUILTIN, HIGH);
     delay(200);
     digitalWrite(LED_BUILTIN, LOW);
