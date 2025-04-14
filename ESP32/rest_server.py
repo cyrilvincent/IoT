@@ -4,6 +4,8 @@ import machine
 import json
 import i2c_lcd
 
+# Wifi must be activated
+
 app = Microdot()
 i2c = machine.SoftI2C(sda=machine.Pin(21), scl=machine.Pin(22))
 bme = bme280.BME280(i2c=i2c)

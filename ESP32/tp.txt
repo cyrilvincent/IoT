@@ -1,13 +1,71 @@
-Blink led bonus vrai led + resistance
-détectuer mouvement ou proximité ou autre ou bouton + led bonus buzze ou vrai led ou relais
-Temp analogique ou potar+ led bonus vrai led
-Grove temp + LCD Ou oled bonus bouton pour faire defiler
-USB temp + LCD ou OLED
-Serial temp + LCD avec question pc
-Serial ping pong Esp32 vs arduino ou 2xesp32 avec voisin
-WiFi rest avec navigateur bonus client python
-Bt avec tel bonus avec pc
-Multithread python
-Oo
-Flash esptools
-Stepper motor
+TP 1 : Thonny
+Installer Thonny
+Installer Micropython
+Utiliser REPL pour faire 1+2
+Bonus : Configurer Pymakr sur VSCode
+
+TP 2 : Blink
+Créer un script qui fait clignoter la LED de la carte toutes les 1s
+Bonus : Avec une vrai LED + resistance
+
+TP 3 : Digital
+Mettre en input digital soit un bouton, un détecteur de mouvement, de proximité, de lumière ou autre
+Allumer la Led en cas d'input = HIGH
+Bonus : remplacer la LED par une vrai led, un buzzer ou un relais
+Bonus++ : Faire fonctionner l'afficheur 7 segments
+
+TP 4 : Analogique
+Mettre un potar
+Varier l'intensiter lumineuse de la led
+Bonus : Remplacer le potar par un capteur de température analogique
+
+TP 5 : I2C
+Mettre le capteur de temperature BME I2C
+Afficher sur un LCD (1602 ou Grove) la température et l'humidité
+Bonus : Mettre un bouton pour faire défiler les 3 infos
+Bonus : Mettre un écran OLED
+
+
+TP 6 : USB
+Sur le PC, saisir temp, hum ou pre
+Retourne par USB l'information
+Bonus : Affiche également sur le LCD ou OLED
+
+TP 7 : Serial
+Idem 6 sur UART2 et le USB-TTL
+
+TP 8 : Serial to Serial
+Brancher 2 cartes en Serial sur UART2
+Faites un Ping Pong
+Bonus : Via PC sur USB : PC1 =USB= ESP32 =UART2= ESP32 =USB= PC2
+
+TP 9 : Wifi REST
+Activer le Wifi
+Créer un services REST avec les routes temp, hum et pre
+Tester via le navigateur
+Créer la route display qui affiche un message sur le LCD ou OLED
+Tester via navigateur
+Bonus : créer le client Python
+
+TP 10 : BLE
+Créer un service BLE avec la température
+Tester sur téléphone
+Créer 2 autres services avec humidity et pressure
+Tester sur téléphone
+Créer un service qui affiche un message sur LCD ou OLED
+Tester sur téléphone
+Bonus : Créer le client Python
+
+TP 11 : Multithread
+Créer 3 threads OO qui vont interroger le service REST pour les 3 méthodes respectivement toutes les 1s, 2s et 4s
+Tester
+Bonus : Créer 1 thread qui appel la route display toutes les secondes
+Bonus : Créer une thread qui interroge le contrôleur par USB ou Serial
+
+TP 12 : Stepper Motor
+Faire fonctionner le moteurs
+Utiliser le protocole de votre choix : USB, Serial, BLE, HTTP
+
+TP 13 : Industrialisation
+Dumper le contrôleur
+Copier tous vos ficher dedans
