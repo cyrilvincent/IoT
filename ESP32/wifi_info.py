@@ -8,6 +8,7 @@ key = "famillevincent"
 def scan():
     print("Scanning Wifi")
     wlan = network.WLAN()
+    wlan.active(True)
     print("Scanned Wifi:", wlan.scan())
 
 def wifi_connect(ssid, key):
