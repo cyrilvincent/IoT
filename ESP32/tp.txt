@@ -1,0 +1,12 @@
+Blink led bonus vrai led + resistance
+détectuer mouvement ou proximité ou autre ou bouton + led bonus buzze ou vrai led ou relais
+Temp analogique ou potar+ led bonus vrai led
+Grove temp + LCD Ou oled bonus bouton pour faire defiler
+Serial temp + LCD avec question pc
+Serial ping pong Esp32 vs arduino ou 2xesp32 avec voisin
+WiFi rest avec navigateur bonus client python
+Bt avec tel bonus avec pc
+Multithread python
+Oo
+Flash esptools
+Stepper motor
