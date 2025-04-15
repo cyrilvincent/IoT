@@ -1,53 +1,83 @@
+TP 0 : Arduino Studio
+Brancher la board via USB
+Installer Arduino Studio
+Dans Arduino Studio ouvrir le projet /ESP32/C/17_01_Hello/17_01_Hello.ino
+Installer dans Board Manager la board ESP32 by Espressif
+Sélectionner votre Board, noter le port COM et choisir le module ESP32-WROOM-DA
+Démarrer le script
+
 TP 1 : Thonny
 Installer Thonny
 Installer Micropython
-Utiliser REPL pour faire 1+2
+Utiliser REPL pour faire 1+2 et print("Hello World")
+Bonus : Utiliser REPL pour afficher sys.version & time.localtime
 Bonus : Configurer Pymakr sur VSCode
 
 TP 2 : Blink
-Créer un script qui fait clignoter la LED de la carte toutes les 1s
+Dans Arduino Studio, démarrer le projet /ESP32/C/17_02_blink/17_02_blink.ino
+Dans Thonny porter le code C en Micropython
 Bonus : Avec une vrai LED + resistance
+Bonus : Mettre 3 leds de couleurs différentes (ou une led RGB) et les allumer successivement à l'aide du bouton
 
 TP 3 : Digital
 Mettre en input digital soit un bouton, un détecteur de mouvement, de proximité, de lumière ou autre
 Allumer la Led en cas d'input = HIGH
+Prendre en photo vos montages
 Bonus : remplacer la LED par une vrai led, un buzzer ou un relais
+Bonus : Mettre tous les capteurs et une led différente par capteur
 Bonus++ : Faire fonctionner l'afficheur 7 segments
 
 TP 4 : Analogique
 Mettre un potar
-Varier l'intensiter lumineuse de la led
+Varier l'intensité lumineuse de la led
 Bonus : Remplacer le potar par un capteur de température analogique
 
-TP 5 : I2C
+TP5 facultatif : TMS
+Mettre la capteur de température TMS
+Afficher la température dans REPL
+
+TP 6 : I2C
 Mettre le capteur de temperature BME I2C
 Afficher sur un LCD (1602 ou Grove) la température et l'humidité
+Bonus : Mettre la capteur de température TMS
 Bonus : Mettre un bouton pour faire défiler les 3 infos
-Bonus : Mettre un écran OLED
 
+TP 7 : OLED
+Mettre un écran OLED
+Afficher la température, l'humidité et la pression
+Si on appuie sur un bouton affiche le logo micropython
+Bonus : afficher l'image Hello World
+Bonus : Créer soit même une image
 
-TP 6 : USB
+TP 8 : USB
 Sur le PC, saisir temp, hum ou pre
 Retourne par USB l'information
 Bonus : Affiche également sur le LCD ou OLED
 
-TP 7 : Serial
-Idem 6 sur UART2 et le USB-TTL
+TP 9 : Serial
+Idem TP 8 sur UART2
+Brancher un USB-TTL
 
-TP 8 : Serial to Serial
+TP 10 Facultatif : Serial to Serial
 Brancher 2 cartes en Serial sur UART2
 Faites un Ping Pong
 Bonus : Via PC sur USB : PC1 =USB= ESP32 =UART2= ESP32 =USB= PC2
 
-TP 9 : Wifi REST
-Activer le Wifi
+TP 11 : Wifi REST
+Activer le Wifi et noter votre IP
+Si nécessaire utiliser la box du cours (/wifi.txt)
+Tester un ping
+Créer un service REST / qui retourne un Hello World from ...
+Tester via le navigateur
 Créer un services REST avec les routes temp, hum et pre
 Tester via le navigateur
 Créer la route display qui affiche un message sur le LCD ou OLED
 Tester via navigateur
-Bonus : créer le client Python
+Bonus : Tester via le navigateur l'ip de vos voisins
+Bonus : Créer le client Python
+Bonus : Tester le client chez vos voisins
 
-TP 10 : BLE
+TP 12 : BLE
 Créer un service BLE avec la température
 Tester sur téléphone
 Créer 2 autres services avec humidity et pressure
@@ -55,17 +85,19 @@ Tester sur téléphone
 Créer un service qui affiche un message sur LCD ou OLED
 Tester sur téléphone
 Bonus : Créer le client Python
+Bonus : Tester chez vos voisins
 
-TP 11 : Multithread
+TP 13 : Multithread
 Créer 3 threads OO qui vont interroger le service REST pour les 3 méthodes respectivement toutes les 1s, 2s et 4s
 Tester
 Bonus : Créer 1 thread qui appel la route display toutes les secondes
-Bonus : Créer une thread qui interroge le contrôleur par USB ou Serial
+Bonus : Créer 1 thread qui interroge le contrôleur par USB ou Serial
+Bonus : Créer des threads qui interrogent vos voisins
 
-TP 12 : Stepper Motor
+TP 14 facultatif : Stepper Motor
 Faire fonctionner le moteurs
 Utiliser le protocole de votre choix : USB, Serial, BLE, HTTP
 
-TP 13 : Industrialisation
+TP 15 : Industrialisation
 Dumper le contrôleur
 Copier tous vos ficher dedans
