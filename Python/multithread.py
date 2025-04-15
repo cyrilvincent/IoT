@@ -98,7 +98,8 @@ class MainService:
        
 
 if __name__ == "__main__":
-    service = MainService("192.168.1.210:5000")
+    # service = MainService("192.168.1.210:5000")
+    service = MainService("192.168.1.101:5000")
     service.start()
     
         

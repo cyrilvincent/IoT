@@ -2,8 +2,11 @@ import time
 import machine
 import network
 
-ssid = "StarlinkVincent"
-key = "famillevincent"
+# ssid = "StarlinkVincent"
+# key = "famillevincent"
+ssid = "HUAWEI-B310-627C"
+key = "AA1L3MYQYA6"
+# Pour changer de Wifi il faut souvent rebooter
 
 def scan():
     print("Scanning Wifi")
@@ -20,8 +23,10 @@ def wifi_connect(ssid, key):
         wlan.connect(ssid, key)
         while not wlan.isconnected():
             machine.idle()
-    print(f'Connected to wifi {ssid}')    
-    print('Wifi config:', wlan.ipconfig('addr4'))
+        print("Connected")        
+    print(f'Connected to wifi {ssid}')
+    # wlan.ipconfig(dhcp4=True)
+    print('Wifi config:', wlan.ipconfig('addr4'), wlan.ifconfig())
 
 if __name__ == "__main__":
     p2 = machine.Pin(2, machine.Pin.OUT)
