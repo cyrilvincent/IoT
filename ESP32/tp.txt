@@ -21,6 +21,7 @@ Bonus : Mettre 3 leds de couleurs différentes (ou une led RGB) et les allumer s
 
 TP 3 : Digital
 Mettre en input digital soit un bouton, un détecteur de mouvement, de proximité, de lumière ou autre
+Attention les pins du boutons sont fragiles
 Allumer la Led en cas d'input = HIGH
 Prendre en photo vos montages
 Bonus : remplacer la LED par une vrai led, un buzzer ou un relais
@@ -28,6 +29,7 @@ Bonus : Mettre tous les capteurs et une led différente par capteur
 Bonus++ : Faire fonctionner l'afficheur 7 segments
 
 TP 4 : Analogique
+Mesurer à vide une entrée PWM sans TearDown, puis avec
 Mettre un potar
 Varier l'intensité lumineuse de la led
 Bonus : Remplacer le potar par un capteur de température analogique
