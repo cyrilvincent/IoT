@@ -5,44 +5,49 @@ Dans Arduino Studio ouvrir le projet /ESP32/C/17_01_Hello/17_01_Hello.ino
 Installer dans Board Manager la board ESP32 by Espressif
 Sélectionner votre Board, noter le port COM et choisir le module ESP32-WROOM-DA
 Démarrer le script
+Tester les scripts prime et blink
 
 TP 1 : Thonny
 Installer Thonny
 Installer Micropython
 Utiliser REPL pour faire 1+2 et print("Hello World")
-Bonus : Utiliser REPL pour afficher sys.version & time.localtime
+Bonus : Utiliser REPL pour afficher sys.version & time.localtime (voir hello.py)
+Bonus : exécuter machine_info.py
+Bonus : exécuter prime.py et noter les différence avec l'Arduino et le code C
 Bonus : Configurer Pymakr sur VSCode
 
 TP 2 : Blink
 Dans Arduino Studio, démarrer le projet /ESP32/C/17_02_blink/17_02_blink.ino
 Dans Thonny porter le code C en Micropython
-Bonus : Avec une vrai LED + resistance
-Bonus : Mettre 3 leds de couleurs différentes (ou une led RGB) et les allumer successivement à l'aide du bouton
+Bonus : Avec une vrai LED + resistance (à calculer)
 
 TP 3 : Digital
-Mettre en input digital soit un bouton, un détecteur de mouvement, de proximité, de lumière ou autre
+Mettre en input digital un bouton
 Attention les pins du boutons sont fragiles
 Allumer la Led en cas d'input = HIGH
 Prendre en photo vos montages
-Bonus : remplacer la LED par une vrai led, un buzzer ou un relais
+Bonus : Remplacer le bouton par un détecteur de mouvement, de proximité, de lumière ou autre
+Bonus : Remplacer la LED par une vrai led, un buzzer
 Bonus : Mettre tous les capteurs et une led différente par capteur
-Bonus++ : Faire fonctionner l'afficheur 7 segments
 
 TP 4 : Analogique
 Mesurer à vide une entrée PWM sans TearDown, puis avec
-Mettre un potar
-Varier l'intensité lumineuse de la led
-Bonus : Remplacer le potar par un capteur de température analogique
+Mettre un potar (potar.py)
+Varier l'intensité lumineuse de la led (fade.py et fade_potar.py) 
+Bonus : Faire de même le potar par un capteur de température analogique Grove (temp_grove.py)
+Bonus : Refaire TP 3 avec un relais de puissance
 
 TP5 facultatif : TMS
-Mettre la capteur de température TMS
+Mettre la capteur de température TMS (bleu)
 Afficher la température dans REPL
 
 TP 6 : I2C
 Mettre le capteur de temperature BME I2C
+Afficher la temperature et l'humidité dans la console
 Afficher sur un LCD (1602 ou Grove) la température et l'humidité
-Bonus : Mettre la capteur de température TMS
+Bonus : Mettre la capteur de température TMS TP 5
 Bonus : Mettre un bouton pour faire défiler les 3 infos
+
 
 TP 7 : OLED
 Mettre un écran OLED
@@ -58,7 +63,8 @@ Bonus : Affiche également sur le LCD ou OLED
 
 TP 9 : Serial
 Idem TP 8 sur UART2
-Brancher un USB-TTL
+Attention bien vérifier que le jumper de l'USB-TTL est en 3.3v et non en 5v
+Brancher un USB-TTL : RX TX croisé sur TX2 RX2 et GND sur GND, ne pas bracher VCC
 
 TP 10 Facultatif : Serial to Serial
 Brancher 2 cartes en Serial sur UART2

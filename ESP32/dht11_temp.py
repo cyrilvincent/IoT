@@ -2,7 +2,7 @@ import machine
 import time
 import dht
 
-capteur = dht.DHT11(machine.Pin(18))
+capteur = dht.DHT11(machine.Pin(17)) # Ne fonctionne pas sur D15
 
 while True:
     try:

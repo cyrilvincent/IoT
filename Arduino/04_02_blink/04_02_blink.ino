@@ -1,4 +1,4 @@
-int led=7; // LED_BUILTIN
+int led=7; // LED_BUILTIN 13 for UNO, 7 for Mini
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.

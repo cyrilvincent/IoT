@@ -4,7 +4,7 @@ import math
 
 print("Potentiometer")
 adc = machine.ADC(35, atten=machine.ADC.ATTN_11DB)
-# si on débrache le pin35 on voit bien les valeurs flottantes
+# si on débranche le pin35 on voit bien les valeurs flottantes
 
 
 while True:
