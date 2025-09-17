@@ -1,6 +1,3 @@
-# Rui Santos & Sara Santos - Random Nerd Tutorials
-# Complete project details at https://RandomNerdTutorials.com/micropython-esp32-bluetooth-low-energy-ble/
-
 from micropython import const
 import asyncio
 import aioble
@@ -15,6 +12,7 @@ led.value(0)
 
 # Init random value
 value = 0
+
 
 # See the following for generating UUIDs:
 # https://www.uuidgenerator.net/

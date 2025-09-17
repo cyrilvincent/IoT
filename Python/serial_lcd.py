@@ -1,8 +1,9 @@
 import serial
 import config
 
-print(f"Open serial on {config.usb}")
-sock = serial.Serial(config.usb)
+port = "COM6"
+print(f"Open serial on {port}")
+sock = serial.Serial(port, baudrate=9600)
 print(sock)
 for i in range(10):
     msg = "TOTO" + str(i) +"\n"

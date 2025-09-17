@@ -1,4 +1,4 @@
-int led=7; // LED_BUILTIN 13 for UNO, 7 for Mini
+int led=13; // LED_BUILTIN 13 for UNO, 7 for Mini
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
@@ -10,5 +10,5 @@ void loop() {
   digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(500);                       // wait for a second
   digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(500);                       // wait for a second
+  delay(1500);                       // wait for a second
 }

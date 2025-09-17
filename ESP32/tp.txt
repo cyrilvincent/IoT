@@ -42,12 +42,12 @@ Mettre la capteur de température TMS (bleu)
 Afficher la température dans REPL
 
 TP 6 : I2C
-Mettre le capteur de temperature BME I2C
+Brancher le capteur de temperature BME I2C
+Copier la librairie bme280_float.py sur l'ESP32 par un simple save as ou save copy en gardant le même nom
 Afficher la temperature et l'humidité dans la console
 Afficher sur un LCD (1602 ou Grove) la température et l'humidité
 Bonus : Mettre la capteur de température TMS TP 5
 Bonus : Mettre un bouton pour faire défiler les 3 infos
-
 
 TP 7 : OLED
 Mettre un écran OLED
@@ -56,22 +56,25 @@ Si on appuie sur un bouton affiche le logo micropython
 Bonus : afficher l'image Hello World
 Bonus : Créer soit même une image
 
-TP 8 : USB
+TP 8 : USB REPL
 Sur le PC, saisir temp, hum ou pre
-Retourne par USB l'information
+Retourne par USB l'information (serial_repl_*.py)
 Bonus : Affiche également sur le LCD ou OLED
 
-TP 9 : Serial
-Idem TP 8 sur UART2
-Attention bien vérifier que le jumper de l'USB-TTL est en 3.3v et non en 5v
-Brancher un USB-TTL : RX TX croisé sur TX2 RX2 et GND sur GND, ne pas bracher VCC
+TP 9 : Serial to Serial
+Brancher en série un ESP32 sur UART2 et un Arduino sur Rx=2 et Tx=3
+Envoyer des messages de l'ESP32 vers l'Arduino en utilisant Arduino/08_04_serial_to_serial (serial_*.py)
+Bonus : Faire la même chose avec 2 ESP32 en Serial sur UART2
+Bonus : Faire répondre l'Arduino ou l'ESP32 récepteur
 
-TP 10 Facultatif : Serial to Serial
-Brancher 2 cartes en Serial sur UART2
-Faites un Ping Pong
-Bonus : Via PC sur USB : PC1 =USB= ESP32 =UART2= ESP32 =USB= PC2
+TP 10 Facultatif : Serial USB-TTL
+Installer le driver drivers/CDM2123620_Setup.exe
+Idem TP 9 sur UART2 avec un USB-TTL
+Attention bien vérifier que le jumper de l'USB-TTL est en 3.3v et non en 5v et ne pas brancher VCC
+Brancher un USB-TTL : RX TX croisé sur TX2 RX2 et GND sur GND, ne pas brancher VCC
+Programmer la partie PC en Python et l'exécuter en CLI (/python/serial_*.py)
 
-TP 11 : Wifi REST
+TP 11 : Wifi HTTP REST
 Activer le Wifi et noter votre IP
 Si nécessaire utiliser la box du cours (/wifi.txt)
 Tester un ping
@@ -81,31 +84,56 @@ Créer un services REST avec les routes temp, hum et pre
 Tester via le navigateur
 Créer la route display qui affiche un message sur le LCD ou OLED
 Tester via navigateur
-Bonus : Tester via le navigateur l'ip de vos voisins
+Bonus : Tester via le navigateur l'IP de vos voisins
 Bonus : Créer le client Python
 Bonus : Tester le client chez vos voisins
 
 TP 12 : BLE
-Créer un service BLE avec la température
+Installer le package aioble sur l'ESP32
+Exécuter le script ble_server.py /!\ Les UUID doivent être unique dans la salle
+Installer nRF Connect sur votre téléphone
+Démarrer nRF Connect, votre ESp32 doit apparaitre, connectez vous
+Chercher Unknown Service avec l'UUID de _BLE_SENSOR_CHAR_UUID
+Chercher la caractéristique qui est NOTIFY, READ : vous être sur sensor_task
+Cliquer sur la flêche qui descend, la valeur est dans le champ value
+Chercher la caractéristique qui est NOTIFY, READ, WRITE : vous être sur wait_for_write
+Cliquer sur la fleche qui monte
+Dans le menu déroulant choisir le type TEXT (UTF-8)
+Saisir 1 dans New Value : la led s'allume
+Saisir 0 : la led s'eteint
+Remplacer le service sensor_task par une mesure réelle de température
 Tester sur téléphone
-Créer 2 autres services avec humidity et pressure
-Tester sur téléphone
-Créer un service qui affiche un message sur LCD ou OLED
-Tester sur téléphone
-Bonus : Créer le client Python
+Bonus : Créer 2 autres services avec humidity et pressure
+Bonus : Créer un service qui affiche un message sur LCD ou OLED
+Bonus : Créer le client Python (ble_client.py)
 Bonus : Tester chez vos voisins
 
-TP 13 : Multithread
+TP 13 facultatif : Multithread
 Créer 3 threads OO qui vont interroger le service REST pour les 3 méthodes respectivement toutes les 1s, 2s et 4s
 Tester
 Bonus : Créer 1 thread qui appel la route display toutes les secondes
 Bonus : Créer 1 thread qui interroge le contrôleur par USB ou Serial
 Bonus : Créer des threads qui interrogent vos voisins
 
-TP 14 facultatif : Stepper Motor
-Faire fonctionner le moteurs
-Utiliser le protocole de votre choix : USB, Serial, BLE, HTTP
+TP 14 : Motors
+Faire fonctionner un moteur à engrenage en 3.3V par l'appuie d'un bouton
+Brancher un servo-moteur en 5V (VIN) et le faire tourner de 0 à 180° en boucle avec la librairie servo
+Faire fonctionner un servo-moteur dont l'angle est lié à un potentiomètre
+Brancher un moteur pas à pas en 5V /!\ Normalement il faudrait du 12V pour fonctionner plus vite
+/!\ Lors du branchement du GND ne pas toucher le 3.3v ni le 5v de l'ESP32
+Faire tourner le moteur pas à pas
+Faire fonctionner le moteur pas à pas en saisissant le nombre de pas à gauche et à droite en utilisant USB, BLE ou HTTP
+Bonus : Afficher l'angle du servo moteur sur un afficheur
+Bonus : Piloter le moteur avec des boutons qui augmentent ou diminuent le nombre de pas
+Bonus : 3.3v est insuffisant pour le moteur à engrenage, faite le fonctionner en 5V (par VIN) avec un relais
 
-TP 15 : Industrialisation
+DEMO 15 : MQTT
+Création d'un serveur MQTT
+Accès client
+
+DEMO 16 : IA
+Démo d'un machine learning
+
+TP 17 : Industrialisation
+Copier tous vos fichiers dans le contrôleur
 Dumper le contrôleur
-Copier tous vos ficher dedans
