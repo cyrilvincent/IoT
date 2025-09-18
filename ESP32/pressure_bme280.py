@@ -9,4 +9,3 @@ bme = bme280.BME280(i2c=i2c)
 while True:
     print(bme.values)
     time.sleep_ms(1000)
-    

@@ -4,8 +4,10 @@ import network
 
 # ssid = "StarlinkVincent"
 # key = "famillevincent"
-ssid = "HUAWEI-B310-627C"
-key = "AA1L3MYQYA6"
+ssid = "Livebox-6E16"
+key = "cokphnZvFjVNGRS2WF"
+# ssid = "HUAWEI-B310-627C"
+# key = "AA1L3MYQYA6"
 # Pour changer de Wifi il faut souvent rebooter
 
 def scan():

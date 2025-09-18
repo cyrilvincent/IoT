@@ -26,9 +26,9 @@ Mettre en input digital un bouton
 Attention les pins du boutons sont fragiles
 Allumer la Led en cas d'input = HIGH
 Prendre en photo vos montages
+Bonus : Remplacer la LED par une vrai led ou un buzzer
+Bonus : Mettre plusieurs boutons et plusieurs leds par boutton, possibilité de mettre une led multi-couleur
 Bonus : Remplacer le bouton par un détecteur de mouvement, de proximité, de lumière ou autre
-Bonus : Remplacer la LED par une vrai led, un buzzer
-Bonus : Mettre tous les capteurs et une led différente par capteur
 
 TP 4 : Analogique
 Mesurer à vide une entrée PWM sans TearDown, puis avec
@@ -45,9 +45,9 @@ TP 6 : I2C
 Brancher le capteur de temperature BME I2C
 Copier la librairie bme280_float.py sur l'ESP32 par un simple save as ou save copy en gardant le même nom
 Afficher la temperature et l'humidité dans la console
-Afficher sur un LCD (1602 ou Grove) la température et l'humidité
+Afficher sur un LCD (1602 ou Grove) la température
 Bonus : Mettre la capteur de température TMS TP 5
-Bonus : Mettre un bouton pour faire défiler les 3 infos
+Bonus : Tester le lidar VL53L0X : https://github.com/uceeatz/VL53L0X
 
 TP 7 : OLED
 Mettre un écran OLED
@@ -127,13 +127,18 @@ Bonus : Afficher l'angle du servo moteur sur un afficheur
 Bonus : Piloter le moteur avec des boutons qui augmentent ou diminuent le nombre de pas
 Bonus : 3.3v est insuffisant pour le moteur à engrenage, faite le fonctionner en 5V (par VIN) avec un relais
 
-DEMO 15 : MQTT
-Création d'un serveur MQTT
-Accès client
+TP 15 : MQTT
+Copier lib/broker.emqx.io-ca.crt sur l'ESP32
+Exécuter le code mqtt_emqx_client.py 
+Sur https://mqttx.app/downloads télécharger et installer le client MQTTX Windows Universal
+Créer une nouvelle connexion : name=formation et cliquer sur connect
+Cliquer sur new subscription et topic=raspberry/mqtt
+Vous verrez apparaitre vos message et vous pouvez poster un message en JSON que vous verrez apparaitre sur l'ESP32
 
-DEMO 16 : IA
-Démo d'un machine learning
-
-TP 17 : Industrialisation
+TP 16 : Industrialisation
+Installer ampy
 Copier tous vos fichiers dans le contrôleur
-Dumper le contrôleur
+Installer et paramétrer putty pour accéder à REPL
+Démarrer un programme avec REPL
+Modifier le ficher boot.py à la racine de l'ESP32
+Dumper le contrôleur avec esptool

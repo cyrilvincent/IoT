@@ -2,12 +2,14 @@ import json
 import random
 import ssl
 import time
+# import wifi
 
 from umqtt.simple import MQTTClient
 
 SERVER = "broker.emqx.io"
 PORT = 8883
-CLIENT_ID = 'micropython-client-{id}'.format(id=random.getrandbits(8))
+CLIENT_ID = 'micropython-esp32-{id}'.format(id=random.getrandbits(8))
+print("ClientID:", CLIENT_ID)
 USERNAME = 'emqx'
 PASSWORD = 'public'
 TOPIC = "raspberry/mqtt"
@@ -46,6 +48,7 @@ def loop_publish(client):
         time.sleep(1)
 
 def run():
+    # wifi.connect()
     client = connect()
     subscribe(client)
     loop_publish(client)
