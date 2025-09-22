@@ -47,7 +47,7 @@ Copier la librairie bme280_float.py sur l'ESP32 par un simple save as ou save co
 Afficher la temperature et l'humidité dans la console
 Afficher sur un LCD (1602 ou Grove) la température
 Bonus : Mettre la capteur de température TMS TP 5
-Bonus : Tester le lidar VL53L0X : https://github.com/uceeatz/VL53L0X
+Bonus : Tester le lidar VL53L0X (lidar.py)
 
 TP 7 : OLED
 Mettre un écran OLED
