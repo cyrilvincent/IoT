@@ -6,6 +6,7 @@ Installer dans Board Manager la board ESP32 by Espressif
 Sélectionner votre Board, noter le port COM et choisir le module ESP32-WROOM-DA
 Démarrer le script
 Tester les scripts prime et blink
+Tips Arduino Nanao : choisir Old Bootloader
 
 TP 1 : Thonny
 Installer Thonny
