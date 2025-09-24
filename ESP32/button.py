@@ -3,7 +3,7 @@ import machine
 
 print("Button")
 p2 = machine.Pin(2, machine.Pin.OUT)
-button = machine.Pin(4, machine.Pin.IN) #, machine.Pin.PULL_DOWN)
+button = machine.Pin(4, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
 while True:
     value = button.value()

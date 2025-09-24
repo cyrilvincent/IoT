@@ -7,6 +7,7 @@ def convert_fahrenheit_to_celsius(fahrenheit):
     celsius = float(fahrenheit - 32) * 5 / 9
     return celsius
 
+machine.freq(160000000)
 print(f"Python version: {sys.version}")
 rtc = machine.RTC()
 print(f"DateTime: {rtc.datetime()}")
