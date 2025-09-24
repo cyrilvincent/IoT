@@ -31,7 +31,6 @@ Bonus : Mettre plusieurs boutons et plusieurs leds par boutton, possibilité de 
 Bonus : Remplacer le bouton par un détecteur de mouvement, de proximité, de lumière ou autre
 
 TP 4 : Analogique
-Mesurer à vide une entrée PWM sans TearDown, puis avec
 Mettre un potar (potar.py)
 Varier l'intensité lumineuse de la led (fade.py et fade_potar.py) 
 Bonus : Faire de même le potar par un capteur de température analogique Grove (temp_grove.py)
