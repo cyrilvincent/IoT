@@ -5,7 +5,8 @@ Dans Arduino Studio ouvrir le projet /ESP32/C/17_01_Hello/17_01_Hello.ino
 Installer dans Board Manager la board ESP32 by Espressif
 Sélectionner votre Board, noter le port COM et choisir le module ESP32-WROOM-DA
 Démarrer le script
-Tester les scripts prime et blink
+Tester les scripts blink
+NE PAS EXECUTER PRIME CA BLOQUE L'ARDUINO
 Tips Arduino Nanao : choisir Old Bootloader
 
 TP 1 : Thonny
@@ -66,7 +67,7 @@ Envoyer des messages de l'ESP32 vers l'Arduino en utilisant Arduino/08_04_serial
 Bonus : Faire la même chose avec 2 ESP32 en Serial sur UART2
 Bonus : Faire répondre l'Arduino ou l'ESP32 récepteur
 
-TP 10 Facultatif : Serial USB-TTL
+TP 10 : Serial USB-TTL
 Installer le driver drivers/CDM2123620_Setup.exe
 Idem TP 9 sur UART2 avec un USB-TTL
 Attention bien vérifier que le jumper de l'USB-TTL est en 3.3v et non en 5v et ne pas brancher VCC
