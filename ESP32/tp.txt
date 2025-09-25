@@ -46,7 +46,6 @@ Brancher le capteur de temperature BME I2C
 Copier la librairie bme280_float.py sur l'ESP32 par un simple save as ou save copy en gardant le même nom
 Afficher la temperature et l'humidité dans la console
 Afficher sur un LCD (1602 ou Grove) la température
-Bonus : Mettre la capteur de température TMS TP 5
 Bonus : Tester le lidar VL53L0X (lidar.py)
 
 TP 7 : OLED
