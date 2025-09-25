@@ -10,6 +10,7 @@ lcd.puts("I2C LCD1602")
 
 n = 0
 while True:
+    print(n)
     lcd.puts(n, 0, 1)
     n += 1
     time.sleep_ms(1000)
