@@ -131,6 +131,7 @@ TP 15 : MQTT
 Copier lib/broker.emqx.io-ca.crt sur l'ESP32
 Exécuter le code mqtt_emqx_client.py 
 Sur https://mqttx.app/downloads télécharger et installer le client MQTTX Windows Universal
+Ou utiliser l'application téléphonique MyMQTT et activer SSL et v3
 Créer une nouvelle connexion : name=formation et cliquer sur connect
 Cliquer sur new subscription et topic=raspberry/mqtt
 Vous verrez apparaitre vos message et vous pouvez poster un message en JSON que vous verrez apparaitre sur l'ESP32

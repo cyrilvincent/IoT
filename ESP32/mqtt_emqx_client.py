@@ -13,6 +13,7 @@ print("ClientID:", CLIENT_ID)
 USERNAME = 'emqx'
 PASSWORD = 'public'
 TOPIC = "esp32/mqtt"
+# MQTTX Client Setup
 
 def on_message(topic, msg):
     print("Received '{payload}' from topic '{topic}'\n".format(
@@ -58,9 +59,12 @@ def loop_publish(client):
 def run():
     # wifi.connect()
     client = connect()
-    # subscribe(client)
+    subscribe(client)
     # loop_publish(client)
     publish(client)
+    while True:
+        client.wait_msg()
+        time.sleep(1)
 
 if __name__ == "__main__":
     run()
