@@ -19,8 +19,8 @@ value = 0
 
 # Merci de modifier les uuid
 _BLE_SERVICE_UUID = bluetooth.UUID('19b10000-e8f2-537e-4f6c-d104768a1214')
-_BLE_SENSOR_CHAR_UUID = bluetooth.UUID('19b10001-e8f2-537e-4f6c-d104768a1214')
-_BLE_LED_UUID = bluetooth.UUID('19b10002-e8f2-537e-4f6c-d104768a1214')
+_BLE_SENSOR_CHAR_UUID = bluetooth.UUID(0x2A6E) # See BLE_Assigned_Numbers.pdf
+_BLE_LED_UUID = bluetooth.UUID(0x2BFD)
 # How frequently to send advertising beacons.
 _ADV_INTERVAL_MS = 250_000
 
@@ -36,7 +36,9 @@ random_value = 0
 
 # Helper to encode the data characteristic UTF-8
 def _encode_data(data):
-    return str(data).encode('utf-8')
+    # return str(data).encode('utf-8')
+    data *= 100
+    return data.to_bytes(2, "little")
 
 # Helper to decode the LED characteristic encoding (bytes).
 def _decode_data(data):
@@ -67,11 +69,12 @@ async def sensor_task():
         
 # Serially wait for connections. Don't advertise while a central is connected.
 async def peripheral_task():
+    print("Create")
     while True:
         try:
             async with await aioble.advertise(
                 _ADV_INTERVAL_MS,
-                name="ESP32",
+                name="ESP32 Cyril",
                 services=[_BLE_SERVICE_UUID],
                 ) as connection:
                     print("Connection from", connection.device)

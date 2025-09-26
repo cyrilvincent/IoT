@@ -8,8 +8,8 @@ import i2c_lcd
 
 app = Microdot()
 i2c = machine.SoftI2C(sda=machine.Pin(21), scl=machine.Pin(22))
-bme = bme280.BME280(i2c=i2c)
-lcd = i2c_lcd.Display(i2c)
+bme = None # bme280.BME280(i2c=i2c)
+lcd = None # i2c_lcd.Display(i2c)
 
 @app.route("/")
 async def index(request):
