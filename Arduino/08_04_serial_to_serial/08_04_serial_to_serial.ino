@@ -16,6 +16,6 @@ void loop()
   if (mySerial.available() > 0) {
     Serial.println("Available");
     String message = mySerial.readStringUntil('\n');
-    Serial.println("ESP32: "+message);
+    Serial.println("Arduino: "+message);
   }
 }

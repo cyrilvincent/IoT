@@ -18,8 +18,10 @@ void loop() {
       break;
     }
   }
-  if(isPrime) {
+  if(isPrime && isPrime > 100000) {
     display(i);
+    i=0;
+    delay(5000);
   }
   i++;
 }
